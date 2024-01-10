@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Single Price Grid Component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // ### Primary
+            bgColor: '#E6EFF6',
+            Cyan: 'hsl(179, 62%, 43%)',
+            CyanLight: '#4ABEBD',
+            BrightYellow: '#BFDF32',
+            VeryBrightYellow: '#D0FF00',
+
+            // ###_Neutral
+            LightGray: '#AAADB7',
+            grayishBlue: '#8EE7E5',
+          },
+          height: {
+            'containerHeight': '25rem',
+          },
+          width: {
+            'containerWidth': '32rem',
+            'containerBreakpoint': '34rem',
+          }
+        },
+        screens: {
+          'desktop': { 'max': '1366px' },
+          'tablet': { 'max': '900px' },
+          'desktop': { 'max': '450px' },
+          'containerBreakpoint': { 'max': '34rem' },
+        },
+      }
+    }
+  </script>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="bg-bgColor h-screen w-screen flex items-center justify-center flex-col">
+
+  <main
+    class="h-containerHeight w-containerWidth grid grid-cols-2 grid-rows-2
+    containerBreakpoint:my-7 containerBreakpoint:w-10/12 containerBreakpoint:grid-cols-1 containerBreakpoint:grid-rows-3 containerBreakpoint:h-fit">
+    <div class="bg-white col-span-2 p-8 flex justify-evenly flex-col containerBreakpoint:col-span-1 containerBreakpoint:p-6">
+      <h3 class="text-xl font-bold text-Cyan"> Join our community</h3>
+      <h3 class="text-xl font-bold text-BrightYellow">30-day, hassle-free money back guarantee</h3>
+      <p class=" text-LightGray text-sm">
+        Gain access to our full library of tutorials along with expert code reviews.
+        Perfect for any developers who are serious about honing their skills.
+      </p>
+    </div>
+    <div class="bg-Cyan p-8 flex flex-col justify-evenly containerBreakpoint:p-6">
+      <h3 class="text-xl text-white">Monthly Subscription</h3>
+      <h2 class="text-3xl text-white font-bold">&dollar;29<span class="text-xs text-grayishBlue font-thin">per month</span></h2>
+
+      <p class="text-sm text-grayishBlue">Full access for less than &dollar;1 a day</p>
+    
+      <button class="bg-BrightYellow hover:bg-VeryBrightYellow py-2 rounded-md text-white font-bold shadow-teal-700 shadow-lg">Sign Up</button>
+    </div>
+    <div class="bg-CyanLight p-8 flex flex-col justify-evenly containerBreakpoint:p-6 containerBreakpoint:justify-evenly">
+      <h3 class="text-xl text-white">Why Us</h3>
+      <p class="text-xs text-grayishBlue containerBreakpoint:pr-10">
+        Tutorials by industry experts
+        Peer & expert code review
+        Coding exercises
+        Access to our GitHub repos
+        Community forum
+        Flashcard decks
+        New videos every week
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.facebook.com/alupihang.dagat.142/">realxnogga</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
